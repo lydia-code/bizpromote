@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    hello!
+  </body>
+</html>
+
+{% extends 'base.html' %} {% block tilte %}Homepage{% endblock%} {% block
+page-title %}Welcome{% endblock%} {% blick main-conctent %}
+<h3 class="alert alert primany">Taiwanese Franchise Brands</h3>
+<hr />
+<center>
+  {% if request.user.is_authenticated %}
+  <div class="card" style="width: 40rem">
+    <div></div>
+  </div>
+  {% else %}
+  <h2>Please log in or sign up!</h2>
+</center>
+{% end block%}

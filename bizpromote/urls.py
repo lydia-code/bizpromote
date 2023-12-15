@@ -16,9 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from mysite import views
-from django.urls import path
+from django.urls import path, include
 
+company_patterns =[
+    path('',views.company, name='comapany'),
+    # path('add', views.comapny_add),
+    # path('delete/<int:id>', views.company_delete)
+
+]
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index)
+    path('', views.index),
+    path('company/', include(company_patterns)),
+    path('video', views.video, name='video')
 ]

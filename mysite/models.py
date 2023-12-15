@@ -9,7 +9,7 @@ class Person(models.Model):
 
 class Company(models.Model):
     name = models.CharField(max_length=100)
-    introdcution = models.TextField(max_length=1000) 
+    introduction = models.TextField(max_length=1000) 
     website = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
     telephone = models.CharField(max_length=100)

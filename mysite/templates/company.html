@@ -1,0 +1,31 @@
+{% extends 'base.html' %} 
+{% block title %}Homepage{% endblock %}
+{% block title-page %}Homepage{% endblock %} 
+{% block page-title %}Welcome{% endblock %} 
+{% block main-content %}
+
+<h3 class="alert alert-primary">Taiwanese Franchise Brands</h3>
+<hr />
+<div align="center">
+    
+    <table>
+        <tr>
+            <th>ID</th><th>Brand</th><th>Introduction</th><th>Website</th><th>Email</th>
+        </tr>
+    {% for company in companies %}
+        <tr>
+            <td width="5%"> {{ company.id}}</td>
+            <td width="8%"> {{ company.name }}</td>
+            <td width="57%"> 
+                {{ company.introduction | truncatewords:1 }}
+            </td>
+            <td width="15%">{{ company.website }}</td>
+            <td width="15%">{{ company.email }}</td>
+        </tr>
+    {% empty %}
+        <tr><td bgcolor="#fff" colspan=5>No comapny yet.</td></tr>
+    {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

@@ -13,7 +13,8 @@ class PersonAdemin(admin.ModelAdmin):
 
 @admin.register(Company)
 class CompanyAdmin(admin.ModelAdmin):
-    list_display = ['name', 'introdcution','website', 'email','telephone']
+    pass
+    #list_display = ['name', 'introdcution','website', 'email','telephone']
 
 @admin.register(Video)
 class VideoAdmin(admin.ModelAdmin):

@@ -7,12 +7,12 @@ from mysite import models
 def index(request):
     return render(request, "index.html")
 
-def video(request):
-    return render(request, "videolist.html")
+# def video(request):
+#     return render(request, "videolist.html")
 
 def company(request):
-    companies=models.Company.objects.all()
+    brna=models.Company.objects.all()
     return render(request, "company.html",locals())
 
-def product(request):
-    return render(request, "productlist.html")
+# def product(request):
+#     return render(request, "productlist.html")

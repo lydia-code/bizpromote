@@ -1,0 +1,20 @@
+{% extends 'base.html' %} 
+{% block title %}{{targetCategory}}{% endblock %}
+{% block title-page %}{{targetCategory}}{% endblock %} 
+{% block page-title %}Welcome{% endblock %} 
+{% block main-content %}
+
+<h3 class="alert alert-primary">Taiwanese Franchise Brands</h3>
+<div align="center">
+    
+    <ul class="list-group">
+        {% for category in categories%}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          {{category}}
+          <span class="badge badge-primary badge-pill">14</span>
+        </li>
+        {% endfor %}
+      </ul>
+</div>
+
+{% endblock %}

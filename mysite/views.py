@@ -5,7 +5,8 @@ from mysite import models
 # Create your views here.
 
 def index(request):
-    return render(request, "index.html")
+    categories = models.Category.objects.all()
+    return render(request, "index.html",locals())
 
 # def video(request):
 #     return render(request, "videolist.html")

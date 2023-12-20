@@ -1,6 +1,5 @@
 {% extends 'base.html' %} 
-{% block title %}Homepage{% endblock %}
-{% block title-page %}Homepage{% endblock %} 
+{% block title %}List{% endblock %}
 {% block page-title %}Welcome{% endblock %} 
 {% block main-content %}
 
@@ -24,7 +23,7 @@
             <td width="15%"><a href="https://www.youtube.com/watch?v={{brand.video}}">video</a></td>
         </tr>
     {% empty %}
-        <tr><td bgcolor="#fff" colspan=5>No comapny yet.</td></tr>
+        <tr><td bgcolor="#fff" colspan=5>Nothing here.</td></tr>
     {% endfor %}
     </table>
 </div>

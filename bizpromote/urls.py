@@ -28,6 +28,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
     path('list/', include(list_patterns)),
-    path('show/<int:id>/', views.show)
+    path('category/<int:id>/', views.category),
+    path('brand/<int:id>/', views.brand),
+    path('test/<int:id>/', views.test)
     #path('video/', views.video, name='video')
 ]

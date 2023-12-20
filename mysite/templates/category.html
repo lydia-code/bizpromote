@@ -1,20 +1,28 @@
-{% extends 'base.html' %} 
-{% block title %}{{targetCategory}}{% endblock %}
-{% block title-page %}{{targetCategory}}{% endblock %} 
-{% block page-title %}Welcome{% endblock %} 
+{% extends "base.html" %}
+
+{% block title %} {{ target_category.name }} {% endblock %}
+
+{% block page-title %} <h1>{{ target_category.name }}</h1> {% endblock %}
+
 {% block main-content %}
-
-<h3 class="alert alert-primary">Taiwanese Franchise Brands</h3>
-<div align="center">
-    
-    <ul class="list-group">
-        {% for category in categories%}
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          {{category}}
-          <span class="badge badge-primary badge-pill">14</span>
-        </li>
-        {% endfor %}
-      </ul>
-</div>
-
+    {% if brands %}
+        <div class="row">
+            {% for brand in brands %}
+                <div class="col-sm-6 col-md-4 col-lg-3 col-sx-12">
+                    <div class="card">
+                        <a href="https://www.youtube.com/watch?v={{brand.video}}" >
+                            <img src="https://i3.ytimg.com/vi/{{brand.video}}/hqdefault.jpg" class="card-img-top" alt="...">
+                        </a>
+                            <div class="card-body" align="center">
+                        
+                        <h5 class="card-title"><a href="/brand/{{brand.id}}/" class="btn btn-primary">{{brand.name}}</a></h5>
+                        <p class="card-text">views:{{brand.counter}}</p>
+                    </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="alert alert-warning">There is no brand yet.</p>
+    {% endif %}
 {% endblock %}

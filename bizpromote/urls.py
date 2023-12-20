@@ -28,5 +28,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
     path('list/', include(list_patterns)),
+    path('show/<int:id>/', views.show)
     #path('video/', views.video, name='video')
 ]

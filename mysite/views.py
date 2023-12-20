@@ -8,6 +8,11 @@ def index(request):
     categories = models.Category.objects.all()
     return render(request, "index.html",locals())
 
+def show(request, id):
+    target_category = models.Category.objects.get(id=id)
+    brands = target_category.brand_set.all()
+    return render(request, "show.html", locals())
+
 # def video(request):
 #     return render(request, "videolist.html")
 

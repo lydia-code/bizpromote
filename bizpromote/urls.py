@@ -18,8 +18,8 @@ from django.contrib import admin
 from mysite import views
 from django.urls import path, include
 
-company_patterns =[
-    path('',views.company, name='comapany'),
+list_patterns =[
+    path('',views.list, name='list'),
     # path('add', views.comapny_add),
     # path('delete/<int:id>', views.company_delete)
 
@@ -27,6 +27,6 @@ company_patterns =[
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
-    path('company/', include(company_patterns)),
-    path('video', views.video, name='video')
+    path('list/', include(list_patterns)),
+    #path('video/', views.video, name='video')
 ]

@@ -10,9 +10,9 @@ def index(request):
 # def video(request):
 #     return render(request, "videolist.html")
 
-def company(request):
-    brna=models.Company.objects.all()
-    return render(request, "company.html",locals())
+def list(request):
+    brands=models.Brand.objects.all()
+    return render(request, "list.html",locals())
 
 # def product(request):
 #     return render(request, "productlist.html")

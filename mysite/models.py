@@ -16,6 +16,7 @@ class Brand(models.Model):
     name = models.CharField(max_length=100)
     category = models.ForeignKey(Category,  on_delete=models.CASCADE)
     introduction = models.TextField(max_length=1000) 
+    company = models.CharField(max_length=100, default = 'n/a')
     website = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
     telephone = models.CharField(max_length=100)

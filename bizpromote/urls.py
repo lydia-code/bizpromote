@@ -30,6 +30,7 @@ urlpatterns = [
     path('list/', include(list_patterns)),
     path('category/<int:id>/', views.category),
     path('brand/<int:id>/', views.brand),
-    path('test/<int:id>/', views.test)
+    path('test/<int:id>/', views.test),
+    path('addbrand/', views.addbrand)
     #path('video/', views.video, name='video')
 ]

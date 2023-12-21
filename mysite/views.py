@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, FileResponse, JsonResponse
 from mysite import models
+from mysite.forms import brandForm
 
 # Create your views here.
 
@@ -28,3 +29,14 @@ def test(request, id):
     return(request, 'test.html', locals())
 # def product(request):
 #     return render(request, "productlist.html")
+
+def addbrand(request):
+    if request.method == "POST":
+        data = brandForm(request.POST, request.FILES)
+        if data.is_valid():
+            data.save()
+        return redirect("/addbrand/")
+    else:
+        form = brandForm()
+    brands = models.Brand.objects.all().order_by('-id')
+    return render(request, "addbrand.html",locals())

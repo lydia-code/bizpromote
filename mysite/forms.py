@@ -1,7 +1,7 @@
 from django.forms import ModelForm
-from mysite.models import Comany
+from mysite.models import Brand
 
-class ComapnyForm(ModelForm):
+class brandForm(ModelForm):
     class Meta:
-        model = Company
+        model = Brand
         fields = '__all__'

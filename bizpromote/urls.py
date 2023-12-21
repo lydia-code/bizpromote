@@ -29,6 +29,7 @@ urlpatterns = [
     path('', views.index),
     path('list/', include(list_patterns)),
     path('category/<int:id>/', views.category),
+    path('brand/', views.brand),
     path('brand/<int:id>/', views.brand),
     path('test/<int:id>/', views.test),
     path('addbrand/', views.addbrand)

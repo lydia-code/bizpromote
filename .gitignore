@@ -5,3 +5,4 @@ mysite/migrations/__pycache__
 .DS_Store
 mysite/.DS_Store
 .DS_Store
+*.env

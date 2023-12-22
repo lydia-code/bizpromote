@@ -1,5 +1,7 @@
+**/__pycache__
 bizpromote/__pycache__
 mysite/__pycache__
 mysite/migrations/__pycache__
 .DS_Store
 mysite/.DS_Store
+.DS_Store

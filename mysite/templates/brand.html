@@ -1,11 +1,10 @@
 {% extends 'base.html' %} 
-{% block title %}1{% endblock %}
-{% block page-title %}1{% endblock %} 
+{% block title %}{{ brand.name }}{% endblock %}
+{% block page-title %}{{ brand.name }}{% endblock %} 
 {% block main-content %}
 <h3 class="alert alert-primary">Taiwanese Franchise Brands</h3>
 <div align="center">
-    hi
-    <!-- <table>
+    <table>
         <tr>
             <th>Brand</th>
             <td>{{ brand.name }}</td>
@@ -40,7 +39,7 @@
                 <img src="https://i3.ytimg.com/vi/{{brand.video}}/hqdefault.jpg" class="card-img-top" alt="...">
             </a></td>
         </tr>
-    </table> -->
+    </table>
 </div>
 
 {% endblock %}

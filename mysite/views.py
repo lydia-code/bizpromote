@@ -21,11 +21,11 @@ def list(request):
     brands = models.Brand.objects.all()
     return render(request, "list.html", locals())
 
-def brand(request):
-    target_brand = models.Brand.objects.get(id=id)
-    # target_brand.counter += 1
-    # target_brand.save()
-    return(request, 'brand.html', locals())
+def brand(request, id):
+    brand = models.Brand.objects.get(id=id)
+    brand.counter += 1
+    brand.save()
+    return render(request, 'brand.html', locals())
 
 def test(request, id):
     return(request, 'test.html', locals())
